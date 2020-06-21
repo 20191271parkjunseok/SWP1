@@ -8,3 +8,19 @@ httpd = make_server (
 )
 
 httpd.serve_forever()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fig = plt.figure()
