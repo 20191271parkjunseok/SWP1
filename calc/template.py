@@ -8,8 +8,9 @@ html = """
                     <input type="submit">
                 </form>
                 Sum = %(sum)s <br><br>
-                Mul = %(mul)s
-        </body>
+                Mul = %(mul)s <br><br>
+		%(error)s<br>       
+	 </body>
 </html>
 
 """

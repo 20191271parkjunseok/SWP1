@@ -7,13 +7,19 @@ def application(environ, start_response):
         first_num = d.get('first_num', [''])[0]
         second_num = d.get('second_num', [''])[0]
         sum, mul = "enter two numbers", "enter two numbers" 
-        if  first_num.isdigit() and second_num.isdigit():
+        try:
                 first_num, second_num = int(first_num), int(second_num)
-                sum = first_num + second_num
+	except ValueError:
+		error = "you entered wrong value"
+		sum=-1
+		mul-1
+	else:
+		error=""        
+	        sum = first_num + second_num
                 mul = first_num * second_num
 
 
-        response_body = html % {'sum' : sum, 'mul' : mul}
+        response_body = html % {'sum' : sum, 'mul' : mul,'error' : error }
 
 
         start_response ('200 OK', [
