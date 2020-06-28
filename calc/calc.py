@@ -10,9 +10,16 @@ def application(environ, start_response):
         try:
                 first_num, second_num = int(first_num), int(second_num)
 	except ValueError:
-		error = "you entered wrong value"
-		sum=-1
-		mul-1
+		if first_num.isdigit():	
+			error = "you entered wrong value in first_num"
+			sum=-1
+			mul=-1
+		elif second_num.isdigit():
+			error = "you entered wrong value in second_num"
+			sum=-1
+			mul=-1
+		else:
+			error = "you entered the wrong value"		
 	else:
 		error=""        
 	        sum = first_num + second_num
